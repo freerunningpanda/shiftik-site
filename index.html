@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shiftik / Шифтик</title>
+  <meta name="description" content="Shiftik — a shift calendar with alarms and pay calculation.">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1d1f23;
+      --muted: #5d636e;
+      --accent: #3f4bef;
+      --card: #f5f5fc;
+      --border: #e2e3f0;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121417;
+        --text: #e7e9ec;
+        --muted: #9aa2ad;
+        --accent: #9aa1ff;
+        --card: #1b1d26;
+        --border: #2c2f3d;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    main {
+      max-width: 44rem;
+      margin: 0 auto;
+      padding: 3rem 1rem 4rem;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      line-height: 1.25;
+      margin: 0 0 0.25rem;
+    }
+
+    .lead {
+      color: var(--muted);
+      margin: 0 0 1.5rem;
+    }
+
+    .links {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      margin: 0 0 2rem;
+    }
+
+    .links ul {
+      margin: 0;
+      padding-left: 1.25rem;
+    }
+
+    li {
+      margin: 0.25rem 0;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section lang="en">
+      <h1>Shiftik</h1>
+      <p class="lead">A shift calendar with alarms before shifts and pay calculation. Your data stays on your phone.</p>
+      <div class="links">
+        <ul>
+          <li><a href="privacy/">Privacy Policy</a></li>
+          <li><a href="terms/">Terms of Service</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section lang="ru">
+      <h1>Шифтик</h1>
+      <p class="lead">Календарь смен с будильниками перед сменой и расчётом заработка. Данные остаются на вашем телефоне.</p>
+      <div class="links">
+        <ul>
+          <li><a href="privacy/#ru">Политика конфиденциальности</a></li>
+          <li><a href="terms/#ru">Условия использования</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <p>AlexPanda · <a href="mailto:alexpanda698@gmail.com">alexpanda698@gmail.com</a></p>
+  </main>
+</body>
+
+</html>

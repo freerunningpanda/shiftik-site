@@ -8,7 +8,7 @@
 ## 1. Опубликовать на GitHub Pages (бесплатно)
 
 1. Создайте на GitHub **публичный** репозиторий `shiftik-site` в аккаунте `freerunningpanda`.
-2. Загрузите в него содержимое папки `shiftik-site`: этот README и папки `privacy` и `terms` с `index.html` внутри.
+2. Загрузите в него содержимое папки `shiftik-site`: `index.html` (главная со ссылками на обе страницы), `_config.yml` (не даёт GitHub Pages опубликовать этот README), этот README и папки `privacy` и `terms` с `index.html` внутри. Всё — в корне репозитория, без папки `docs`.
 3. В репозитории: Settings → Pages → Build and deployment → Source: «Deploy from a branch», ветка `main`, папка `/ (root)` → Save.
 4. Через минуту страницы откроются по адресам `https://freerunningpanda.github.io/shiftik-site/privacy/` и `https://freerunningpanda.github.io/shiftik-site/terms/`.
 
