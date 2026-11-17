@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shiftik — shift calendar with alarms and pay calculation</title>
+  <meta name="description"
+    content="Shift calendar for Android: 2 on 2 off, 24 hours on 3 off and any rotation, an alarm before every shift, pay calculation and monthly totals. No sign-up, works offline.">
+  <meta name="theme-color" content="#f5f5fc">
+  <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="alternate" hreflang="ru" href="https://freerunningpanda.github.io/shiftik-site/">
+  <link rel="alternate" hreflang="en" href="https://freerunningpanda.github.io/shiftik-site/en/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Shiftik — shift calendar">
+  <meta property="og:description" content="Shifts, an alarm before every shift and your pay in one calendar. No sign-up, works offline.">
+  <meta property="og:image" content="https://freerunningpanda.github.io/shiftik-site/assets/og-en.png">
+  <meta property="og:url" content="https://freerunningpanda.github.io/shiftik-site/en/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="../assets/fonts/manrope-extrabold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/manrope-medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="logo" href="./"><img src="../assets/logo.svg" alt="" width="36" height="36">Shiftik</a>
+      <nav class="nav" aria-label="Sections">
+        <a href="#features">Features</a>
+        <a href="#screens">Screens</a>
+        <a href="#pro">PRO</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="top-actions">
+        <a class="lang" href="../" hreflang="ru" lang="ru" aria-label="Русская версия">RU</a>
+        <a class="btn btn-tonal btn-sm" href="#download">Download</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow"><svg class="i i-sm" aria-hidden="true"><use href="../assets/icons.svg#calendar"></use></svg>Shift calendar for Android</span>
+          <h1>Shifts, alarms and pay in one calendar</h1>
+          <p class="lead">Shiftik knows your schedule ahead: it shows how long until your next shift, wakes you up on
+            time and works out your pay for the month. No sign-up, no internet needed.</p>
+          <div class="stores">
+            <!-- RuStore link: the app.shiftik page. It won't open until the app passes moderation. -->
+            <a class="btn btn-primary" href="https://www.rustore.ru/catalog/app/app.shiftik">
+              <svg class="i" aria-hidden="true"><use href="../assets/icons.svg#download"></use></svg>Get it on RuStore</a>
+            <span class="btn btn-neutral" aria-disabled="true">Google Play — coming soon</span>
+          </div>
+          <p class="note">Free · Android 7.0 and newer</p>
+        </div>
+
+        <div class="shot">
+          <img src="../assets/shots/en/home.webp" width="640" height="1312"
+            alt="Shiftik home screen: next shift in 7 hours 57 minutes, alarm at 7:00 AM, monthly totals and the November calendar">
+          <div class="float float-alarm" aria-hidden="true">
+            <span class="tile"><svg class="i"><use href="../assets/icons.svg#alarm-clock"></use></svg></span>
+            <span>Alarm<b>7:00 AM</b></span>
+          </div>
+          <div class="float float-pay" aria-hidden="true">
+            <span class="tile"><svg class="i"><use href="../assets/icons.svg#wallet"></use></svg></span>
+            <span>November<b>≈ $4,136</b></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <ul class="facts">
+          <li><span class="tile"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#user-x"></use></svg></span>
+            <div><strong>No sign-up</strong><span>No account, no email</span></div>
+          </li>
+          <li><span class="tile"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#wifi-off"></use></svg></span>
+            <div><strong>Works offline</strong><span>No internet needed</span></div>
+          </li>
+          <li><span class="tile"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#smartphone"></use></svg></span>
+            <div><strong>Your data stays</strong><span>On your phone only</span></div>
+          </li>
+          <li><span class="tile"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#ban"></use></svg></span>
+            <div><strong>No ads</strong><span>And no subscription</span></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Features</span>
+          <h2>Everything a shift worker needs</h2>
+          <p>Pick your rotation once — Shiftik lays out your shifts for months ahead and keeps track of each one.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <span class="tile"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#repeat"></use></svg></span>
+            <h3>Ready-made rotations</h3>
+            <p>2 on 2 off, 24 hours on 3 off, day-night-off, Monday to Friday — or your own cycle of any length.</p>
+            <div class="chips" aria-hidden="true">
+              <span class="cycle"><span class="chip chip-d">D</span><span class="chip chip-d">D</span><span class="chip chip-v">–</span><span class="chip chip-v">–</span></span>
+              <span class="cycle"><span class="chip chip-d">D</span><span class="chip chip-n">N</span><span class="chip chip-v">–</span><span class="chip chip-v">–</span></span>
+              <span class="cycle"><span class="chip chip-s">24</span><span class="chip chip-v">–</span><span class="chip chip-v">–</span><span class="chip chip-v">–</span></span>
+            </div>
+          </article>
+          <article class="card">
+            <span class="tile"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#alarm-clock"></use></svg></span>
+            <h3>An alarm before every shift</h3>
+            <p>Its own time for each shift type and a reminder the evening before. It rings even when the app is closed.</p>
+          </article>
+          <article class="card">
+            <span class="tile"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#list-checks"></use></svg></span>
+            <h3>Alarm check</h3>
+            <p>Shows what to turn on in your phone so alarms aren't late. And lets you set a test alarm.</p>
+          </article>
+          <article class="card">
+            <span class="tile"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#pencil"></use></svg></span>
+            <h3>Change a single day</h3>
+            <p>A swap, sick leave, vacation, different hours or a note — without editing the whole rotation.</p>
+          </article>
+          <article class="card">
+            <span class="tile"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#wallet"></use></svg></span>
+            <h3>Pay</h3>
+            <p>Hourly or per-shift rate, night, holiday and overtime pay. A new rate starts from the date you choose.</p>
+          </article>
+          <article class="card">
+            <span class="tile"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#chart-column"></use></svg></span>
+            <h3>Totals and timesheet</h3>
+            <p>Shifts, hours and pay for a month or any dates. Export the timesheet to CSV.</p>
+          </article>
+          <article class="card">
+            <span class="tile"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#layout-grid"></use></svg></span>
+            <h3>Widgets</h3>
+            <p>A month or two weeks of shifts right on your home screen.</p>
+          </article>
+          <article class="card">
+            <span class="tile"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#circle-pause"></use></svg></span>
+            <h3>Schedule break</h3>
+            <p>Left a job, parental leave or long sick leave: shifts and alarms pause, your history stays.</p>
+          </article>
+          <article class="card">
+            <span class="tile"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#archive"></use></svg></span>
+            <h3>Backup</h3>
+            <p>Schedule, rates and day changes in one file — take everything to a new phone.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="screens">
+      <div class="wrap rows">
+        <div class="row">
+          <div>
+            <span class="kicker">Calendar</span>
+            <h2>Your schedule months ahead</h2>
+            <p>Shifts, days off and sick days at a glance. Tap a day to add a swap, sick leave or a note.</p>
+            <ul class="ticks">
+              <li><svg class="i i-sm" aria-hidden="true"><use href="../assets/icons.svg#check"></use></svg>Sick leave and vacation right in the calendar</li>
+              <li><svg class="i i-sm" aria-hidden="true"><use href="../assets/icons.svg#check"></use></svg>Shifts, hours and pay for the month below</li>
+              <li><svg class="i i-sm" aria-hidden="true"><use href="../assets/icons.svg#check"></use></svg>Notes on any day</li>
+            </ul>
+          </div>
+          <div class="shot">
+            <img src="../assets/shots/en/calendar.webp" width="640" height="1312" loading="lazy"
+              alt="Full calendar for November: day and night shifts, a sick day and monthly totals">
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <span class="kicker">Pay</span>
+            <h2>What you've earned — before payday</h2>
+            <p>Shiftik counts by your rates and rules and shows what the total is made of.</p>
+            <ul class="ticks">
+              <li><svg class="i i-sm" aria-hidden="true"><use href="../assets/icons.svg#check"></use></svg>Totals by shift type</li>
+              <li><svg class="i i-sm" aria-hidden="true"><use href="../assets/icons.svg#check"></use></svg>Night, holiday and overtime pay separately</li>
+              <li><svg class="i i-sm" aria-hidden="true"><use href="../assets/icons.svg#check"></use></svg>A month or any dates, timesheet in CSV</li>
+            </ul>
+          </div>
+          <div class="shot">
+            <img src="../assets/shots/en/report.webp" width="640" height="1312" loading="lazy"
+              alt="Totals for November: $4,136, shifts by type and how the pay adds up">
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <span class="kicker">Alarms</span>
+            <h2>An alarm you can count on</h2>
+            <p>Android saves battery and may close an app at the worst moment. Alarm check shows what to set up on your
+              phone so the alarm rings on time.</p>
+            <ul class="ticks">
+              <li><svg class="i i-sm" aria-hidden="true"><use href="../assets/icons.svg#check"></use></svg>Notifications and exact time</li>
+              <li><svg class="i i-sm" aria-hidden="true"><use href="../assets/icons.svg#check"></use></svg>Battery saving, step by step</li>
+              <li><svg class="i i-sm" aria-hidden="true"><use href="../assets/icons.svg#check"></use></svg>A test alarm</li>
+            </ul>
+          </div>
+          <div class="shot">
+            <img src="../assets/shots/en/check.webp" width="640" height="1312" loading="lazy"
+              alt="Alarm check: notifications and exact time are on, battery saving is left">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pro">
+      <div class="wrap">
+        <div class="pro-card">
+          <div>
+            <span class="kicker">Shiftik PRO</span>
+            <h2>More features — one purchase</h2>
+            <div class="price"><b>299 ₽</b><span class="pill">one-time, no subscription</span></div>
+            <p>Available in the RuStore version; Google Play is coming later. Everything that is free now stays free.</p>
+            <ul class="pro-list">
+              <li><span class="tile"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#users"></use></svg></span>
+                <div><strong>Several schedules</strong><span>A second job, your partner's or a coworker's schedule</span></div>
+              </li>
+              <li><span class="tile"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#file-text"></use></svg></span>
+                <div><strong>PDF report</strong><span>Shifts, hours and earnings for any period in one file</span></div>
+              </li>
+              <li><span class="tile"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#chart-column"></use></svg></span>
+                <div><strong>Yearly statistics</strong><span>Hours and earnings by month, months compared</span></div>
+              </li>
+              <li><span class="tile"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#palette"></use></svg></span>
+                <div><strong>Widget styles</strong><span>Themes and colors for home screen widgets</span></div>
+              </li>
+            </ul>
+          </div>
+          <div class="shot">
+            <img src="../assets/shots/en/pro.webp" width="640" height="1312" loading="lazy"
+              alt="Shiftik PRO screen: four features and the “Buy for 299 ₽” button">
+          </div>
+        </div>
+
+        <div class="gallery">
+          <figure>
+            <img src="../assets/shots/en/calendar-pro.webp" width="640" height="1312" loading="lazy"
+              alt="Calendar with two schedules, Work and Olga, each in its own color">
+            <figcaption><strong>Several schedules</strong>Each one in its own color</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/shots/en/year.webp" width="640" height="1312" loading="lazy"
+              alt="Yearly statistics for 2026: earnings by month in a bar chart">
+            <figcaption><strong>Yearly statistics</strong>Earnings and hours by month</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/shots/en/widgets.webp" width="640" height="1312" loading="lazy"
+              alt="Widget styles: widget preview and the Light, Dark, Brand and Lilac themes">
+            <figcaption><strong>Widget styles</strong>Four themes for your home screen</figcaption>
+          </figure>
+        </div>
+
+        <div class="buy">
+          <article class="card">
+            <h3>How to buy</h3>
+            <ol class="steps">
+              <li>
+                <div><strong>Tap “Buy for 299 ₽”</strong><span>In the app: Settings → Shiftik PRO.</span></div>
+              </li>
+              <li>
+                <div><strong>Pay on the Robokassa page</strong><span>By card or another available method. The receipt
+                    is sent by email.</span></div>
+              </li>
+              <li>
+                <div><strong>PRO turns on right away</strong><span>Keep your purchase code — it brings PRO back on a new
+                    phone.</span></div>
+              </li>
+            </ol>
+          </article>
+          <article class="card">
+            <span class="tile"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#key-round"></use></svg></span>
+            <h3>Your purchase won't get lost</h3>
+            <p>On a new phone, PRO comes back with your purchase code or a backup — the internet is needed only to
+              restore with a code.</p>
+            <p>Not what you expected? Write within 14 days and we'll refund you. Terms of purchase and refunds are in
+              the <a href="../offer/">offer (in Russian)</a>.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">FAQ</span>
+          <h2>Frequently asked questions</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Is Shiftik free?<svg class="i" aria-hidden="true"><use href="../assets/icons.svg#chevron-down"></use></svg></summary>
+            <p>Yes. The calendar, alarms, pay, totals, widgets and backup are free and will stay free. Extra features
+              come with PRO, a one-time purchase.</p>
+          </details>
+          <details>
+            <summary>Do I need the internet?<svg class="i" aria-hidden="true"><use href="../assets/icons.svg#chevron-down"></use></svg></summary>
+            <p>No. Your schedule, alarms and pay work offline. The RuStore version goes online only to buy or restore
+              PRO.</p>
+          </details>
+          <details>
+            <summary>Where is my data stored?<svg class="i" aria-hidden="true"><use href="../assets/icons.svg#chevron-down"></use></svg></summary>
+            <p>Only on your phone: there's no sign-up, and your schedule and pay aren't sent anywhere. Details are in
+              the <a href="../privacy/">privacy policy</a>.</p>
+          </details>
+          <details>
+            <summary>Will the alarm really ring?<svg class="i" aria-hidden="true"><use href="../assets/icons.svg#chevron-down"></use></svg></summary>
+            <p>Shiftik sets exact Android alarms and rings even when the app is closed. Some phones close apps to save
+              battery — Alarm check shows what to set up and lets you set a test alarm.</p>
+          </details>
+          <details>
+            <summary>How do I move to a new phone?<svg class="i" aria-hidden="true"><use href="../assets/icons.svg#chevron-down"></use></svg></summary>
+            <p>Save a backup to a file and restore it on the new phone: Settings → Backup. PRO comes back from the backup
+              or with your purchase code.</p>
+          </details>
+          <details>
+            <summary>Can I get a refund for PRO?<svg class="i" aria-hidden="true"><use href="../assets/icons.svg#chevron-down"></use></svg></summary>
+            <p>Yes, within 14 days of payment: write to <a
+                href="mailto:alexpanda698@gmail.com">alexpanda698@gmail.com</a> with your purchase code. The terms are in
+              the <a href="../offer/">offer (in Russian)</a>.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="download">
+      <div class="wrap">
+        <div class="final">
+          <img src="../assets/logo.svg" alt="" width="72" height="72">
+          <h2>Get Shiftik</h2>
+          <p>Free, no sign-up and no ads. Android 7.0 and newer.</p>
+          <div class="stores">
+            <a class="btn btn-primary" href="https://www.rustore.ru/catalog/app/app.shiftik">
+              <svg class="i" aria-hidden="true"><use href="../assets/icons.svg#download"></use></svg>Get it on RuStore</a>
+            <span class="btn btn-neutral" aria-disabled="true">Google Play — coming soon</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <a class="logo" href="./"><img src="../assets/logo.svg" alt="" width="28" height="28">Shiftik</a>
+      <nav aria-label="Documents">
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="../terms/">Terms of Service</a>
+        <a href="../offer/">PRO offer (in Russian)</a>
+        <a href="mailto:alexpanda698@gmail.com">alexpanda698@gmail.com</a>
+      </nav>
+      <p>© 2026 AlexPanda. The PRO seller and their details are in the <a href="../offer/">offer</a>.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Shadow under the header once the page is scrolled.
+    const header = document.querySelector('.top');
+    const mark = () => header.classList.toggle('scrolled', window.scrollY > 4);
+    addEventListener('scroll', mark, { passive: true });
+    mark();
+  </script>
+</body>
+
+</html>

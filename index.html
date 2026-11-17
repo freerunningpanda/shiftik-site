@@ -1,158 +1,369 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shiftik / Шифтик</title>
-  <meta name="description" content="Shiftik — a shift calendar with alarms and pay calculation.">
-  <style>
-    :root {
-      --bg: #ffffff;
-      --text: #1d1f23;
-      --muted: #5d636e;
-      --accent: #3f4bef;
-      --card: #f5f5fc;
-      --border: #e2e3f0;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #121417;
-        --text: #e7e9ec;
-        --muted: #9aa2ad;
-        --accent: #9aa1ff;
-        --card: #1b1d26;
-        --border: #2c2f3d;
-      }
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    }
-
-    main {
-      max-width: 44rem;
-      margin: 0 auto;
-      padding: 3rem 1rem 4rem;
-    }
-
-    a {
-      color: var(--accent);
-    }
-
-    h1 {
-      font-size: 1.9rem;
-      line-height: 1.25;
-      margin: 0 0 0.25rem;
-    }
-
-    .lead {
-      color: var(--muted);
-      margin: 0 0 1.5rem;
-    }
-
-    h2 {
-      font-size: 1.25rem;
-      line-height: 1.3;
-      margin: 0 0 0.5rem;
-    }
-
-    .pro {
-      margin: 0 0 1.5rem;
-    }
-
-    .pro p {
-      margin: 0 0 0.5rem;
-    }
-
-    .pro ul {
-      margin: 0 0 0.5rem;
-      padding-left: 1.25rem;
-    }
-
-    .links {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1rem 1.25rem;
-      margin: 0 0 2rem;
-    }
-
-    .links ul {
-      margin: 0;
-      padding-left: 1.25rem;
-    }
-
-    li {
-      margin: 0.25rem 0;
-    }
-  </style>
+  <title>Шифтик — календарь смен с будильником и расчётом заработка</title>
+  <meta name="description"
+    content="Календарь смен для Android: 2 через 2, сутки через трое и любые графики, будильник перед сменой, расчёт заработка и итоги за месяц. Без регистрации и интернета.">
+  <meta name="theme-color" content="#f5f5fc">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="alternate" hreflang="ru" href="https://freerunningpanda.github.io/shiftik-site/">
+  <link rel="alternate" hreflang="en" href="https://freerunningpanda.github.io/shiftik-site/en/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Шифтик — календарь смен">
+  <meta property="og:description" content="Смены, будильник перед сменой и заработок в одном календаре. Без регистрации и интернета.">
+  <meta property="og:image" content="https://freerunningpanda.github.io/shiftik-site/assets/og-ru.png">
+  <meta property="og:url" content="https://freerunningpanda.github.io/shiftik-site/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="assets/fonts/manrope-extrabold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/manrope-medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/site.css">
 </head>
 
 <body>
+  <header class="top">
+    <div class="wrap">
+      <a class="logo" href="./"><img src="assets/logo.svg" alt="" width="36" height="36">Шифтик</a>
+      <nav class="nav" aria-label="Разделы">
+        <a href="#features">Возможности</a>
+        <a href="#screens">Экраны</a>
+        <a href="#pro">PRO</a>
+        <a href="#faq">Вопросы</a>
+      </nav>
+      <div class="top-actions">
+        <a class="lang" href="en/" hreflang="en" lang="en" aria-label="English version">EN</a>
+        <a class="btn btn-tonal btn-sm" href="#download">Скачать</a>
+      </div>
+    </div>
+  </header>
+
   <main>
-    <section lang="en">
-      <h1>Shiftik</h1>
-      <p class="lead">A shift calendar with alarms before shifts and pay calculation. Your data stays on your phone.</p>
-      <div class="pro">
-        <h2>Shiftik PRO</h2>
-        <p>The main features are free. PRO adds:</p>
-        <ul>
-          <li>several schedules in one calendar — a second job, a partner's or a coworker's schedule;</li>
-          <li>a PDF report for a month or any dates;</li>
-          <li>yearly stats by month;</li>
-          <li>themes and colors for home screen widgets.</li>
-        </ul>
-        <p>In the RuStore version, PRO is a one-time purchase in the app: 299 ₽, no subscription. Payment is made on
-          the Robokassa page, and the receipt is sent by email. Terms of purchase and refunds are in the
-          <a href="offer/">offer (in Russian)</a>.</p>
-        <!-- После публикации в RuStore: ссылка на страницу приложения. -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow"><svg class="i i-sm" aria-hidden="true"><use href="assets/icons.svg#calendar"></use></svg>Календарь смен для Android</span>
+          <h1>Смены, будильники и заработок в одном календаре</h1>
+          <p class="lead">Шифтик знает ваш график наперёд: покажет, сколько до смены, разбудит вовремя и посчитает
+            заработок за месяц. Без регистрации и интернета.</p>
+          <div class="stores">
+            <!-- Ссылка RuStore: страница приложения app.shiftik. Пока приложение не прошло модерацию, она не откроется. -->
+            <a class="btn btn-primary" href="https://www.rustore.ru/catalog/app/app.shiftik">
+              <svg class="i" aria-hidden="true"><use href="assets/icons.svg#download"></use></svg>Скачать в RuStore</a>
+            <span class="btn btn-neutral" aria-disabled="true">Google Play — скоро</span>
+          </div>
+          <p class="note">Бесплатно · Android 7.0 и новее</p>
+        </div>
+
+        <div class="shot">
+          <img src="assets/shots/ru/home.webp" width="640" height="1312"
+            alt="Главный экран Шифтика: до смены 8 часов 13 минут, будильник в 7:00, итоги месяца и календарь на ноябрь">
+          <div class="float float-alarm" aria-hidden="true">
+            <span class="tile"><svg class="i"><use href="assets/icons.svg#alarm-clock"></use></svg></span>
+            <span>Будильник<b>7:00</b></span>
+          </div>
+          <div class="float float-pay" aria-hidden="true">
+            <span class="tile"><svg class="i"><use href="assets/icons.svg#wallet"></use></svg></span>
+            <span>За ноябрь<b>≈ 69 160 ₽</b></span>
+          </div>
+        </div>
       </div>
-      <div class="links">
-        <ul>
-          <li><a href="privacy/">Privacy Policy</a></li>
-          <li><a href="terms/">Terms of Service</a></li>
-          <li><a href="offer/">Shiftik PRO offer (RuStore, in Russian)</a></li>
+
+      <div class="wrap">
+        <ul class="facts">
+          <li><span class="tile"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#user-x"></use></svg></span>
+            <div><strong>Без регистрации</strong><span>Ни аккаунта, ни почты</span></div>
+          </li>
+          <li><span class="tile"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#wifi-off"></use></svg></span>
+            <div><strong>Без интернета</strong><span>Всё работает офлайн</span></div>
+          </li>
+          <li><span class="tile"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#smartphone"></use></svg></span>
+            <div><strong>Данные у вас</strong><span>Только на телефоне</span></div>
+          </li>
+          <li><span class="tile"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#ban"></use></svg></span>
+            <div><strong>Без рекламы</strong><span>И без подписки</span></div>
+          </li>
         </ul>
       </div>
     </section>
 
-    <section lang="ru">
-      <h1>Шифтик</h1>
-      <p class="lead">Календарь смен с будильниками перед сменой и расчётом заработка. Данные остаются на вашем телефоне.</p>
-      <div class="pro">
-        <h2>Шифтик PRO — 299 ₽</h2>
-        <p>Основные функции бесплатны. PRO добавляет:</p>
-        <ul>
-          <li>несколько графиков в одном календаре — вторая работа, график супруга или напарника;</li>
-          <li>отчёт в PDF за месяц или любые даты;</li>
-          <li>статистику за год по месяцам;</li>
-          <li>темы и цвета виджетов на главном экране.</li>
-        </ul>
-        <p>В версии из RuStore PRO покупается в приложении, кнопкой «Купить за 299 ₽» на экране PRO: разово, без
-          подписки. Оплата — на странице Robokassa, чек приходит на почту. Условия покупки и возврата — в
-          <a href="offer/">публичной оферте</a>.</p>
-        <!-- После публикации в RuStore: ссылка на страницу приложения. -->
-      </div>
-      <div class="links">
-        <ul>
-          <li><a href="privacy/#ru">Политика конфиденциальности</a></li>
-          <li><a href="terms/#ru">Условия использования</a></li>
-          <li><a href="offer/">Публичная оферта Шифтик PRO (RuStore)</a></li>
-        </ul>
+    <section class="section" id="features">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Возможности</span>
+          <h2>Всё, что нужно при сменном графике</h2>
+          <p>Выберите график один раз — Шифтик расставит смены на месяцы вперёд и будет помнить о каждой.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <span class="tile"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#repeat"></use></svg></span>
+            <h3>Готовые графики</h3>
+            <p>2 через 2, сутки через трое, день-ночь-отсыпной-выходной, пятидневка — или свой цикл любой длины.</p>
+            <div class="chips" aria-hidden="true">
+              <span class="cycle"><span class="chip chip-d">Д</span><span class="chip chip-d">Д</span><span class="chip chip-v">В</span><span class="chip chip-v">В</span></span>
+              <span class="cycle"><span class="chip chip-d">Д</span><span class="chip chip-n">Н</span><span class="chip chip-v">В</span><span class="chip chip-v">В</span></span>
+              <span class="cycle"><span class="chip chip-s">С</span><span class="chip chip-v">В</span><span class="chip chip-v">В</span><span class="chip chip-v">В</span></span>
+            </div>
+          </article>
+          <article class="card">
+            <span class="tile"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#alarm-clock"></use></svg></span>
+            <h3>Будильник перед сменой</h3>
+            <p>Своё время для каждого типа смены и напоминание накануне вечером. Звонит, даже когда приложение закрыто.</p>
+          </article>
+          <article class="card">
+            <span class="tile"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#list-checks"></use></svg></span>
+            <h3>Проверка будильников</h3>
+            <p>Подскажет, что включить на вашем телефоне, чтобы будильник не опоздал. И даст поставить пробный.</p>
+          </article>
+          <article class="card">
+            <span class="tile"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#pencil"></use></svg></span>
+            <h3>Правка одного дня</h3>
+            <p>Подмена, больничный, отпуск, своё время смены и заметка — без правки всего графика.</p>
+          </article>
+          <article class="card">
+            <span class="tile"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#wallet"></use></svg></span>
+            <h3>Заработок</h3>
+            <p>Ставка за час или за смену, ночные, праздничные и сверхурочные. Новая ставка — с нужной даты.</p>
+          </article>
+          <article class="card">
+            <span class="tile"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#chart-column"></use></svg></span>
+            <h3>Итоги и табель</h3>
+            <p>Смены, часы и заработок за месяц или любые даты. Табель выгружается в CSV.</p>
+          </article>
+          <article class="card">
+            <span class="tile"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#layout-grid"></use></svg></span>
+            <h3>Виджеты</h3>
+            <p>Месяц или две недели смен — прямо на главном экране телефона.</p>
+          </article>
+          <article class="card">
+            <span class="tile"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#circle-pause"></use></svg></span>
+            <h3>Перерыв в графике</h3>
+            <p>Уволились, декрет или долгий больничный: смены и будильники на паузе, история остаётся.</p>
+          </article>
+          <article class="card">
+            <span class="tile"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#archive"></use></svg></span>
+            <h3>Резервная копия</h3>
+            <p>График, ставки и правки — в одном файле. С ним всё переедет на новый телефон.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <p>AlexPanda · <a href="mailto:alexpanda698@gmail.com">alexpanda698@gmail.com</a></p>
+    <section class="section" id="screens">
+      <div class="wrap rows">
+        <div class="row">
+          <div>
+            <span class="kicker">Календарь</span>
+            <h2>График на месяцы вперёд</h2>
+            <p>Смены, выходные и праздники видны сразу. Нажмите на день, чтобы поставить подмену, больничный или
+              заметку.</p>
+            <ul class="ticks">
+              <li><svg class="i i-sm" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Праздники отмечены красным</li>
+              <li><svg class="i i-sm" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Больничный и отпуск — прямо в календаре</li>
+              <li><svg class="i i-sm" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Смены, часы и заработок месяца под календарём</li>
+            </ul>
+          </div>
+          <div class="shot">
+            <img src="assets/shots/ru/calendar.webp" width="640" height="1312" loading="lazy"
+              alt="Весь календарь на ноябрь: дневные и ночные смены, больничный и праздник">
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <span class="kicker">Заработок</span>
+            <h2>Сколько вы заработали — ещё до зарплаты</h2>
+            <p>Шифтик считает по вашим ставкам и правилам и показывает, из чего сложилась сумма.</p>
+            <ul class="ticks">
+              <li><svg class="i i-sm" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Итоги по типам смен</li>
+              <li><svg class="i i-sm" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Ночные, праздничные и сверхурочные отдельно</li>
+              <li><svg class="i i-sm" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Месяц или любые даты, табель в CSV</li>
+            </ul>
+          </div>
+          <div class="shot">
+            <img src="assets/shots/ru/report.webp" width="640" height="1312" loading="lazy"
+              alt="Итоги за ноябрь: 69 160 рублей, смены по типам и из чего сложился заработок">
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <span class="kicker">Будильники</span>
+            <h2>Будильник, который не подведёт</h2>
+            <p>Android экономит заряд и может закрыть приложение в самый неудобный момент. Проверка будильников
+              покажет, что настроить на вашем телефоне, чтобы будильник зазвонил вовремя.</p>
+            <ul class="ticks">
+              <li><svg class="i i-sm" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Уведомления и точное время</li>
+              <li><svg class="i i-sm" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Экономия заряда — по шагам</li>
+              <li><svg class="i i-sm" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Пробный будильник</li>
+            </ul>
+          </div>
+          <div class="shot">
+            <img src="assets/shots/ru/check.webp" width="640" height="1312" loading="lazy"
+              alt="Проверка будильников: уведомления и точное время включены, остался шаг про экономию заряда">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pro">
+      <div class="wrap">
+        <div class="pro-card">
+          <div>
+            <span class="kicker">Шифтик PRO</span>
+            <h2>Больше возможностей — одной покупкой</h2>
+            <div class="price"><b>299 ₽</b><span class="pill">один раз, без подписки</span></div>
+            <p>Покупка — в версии из RuStore. Всё, что уже бесплатно, останется бесплатным.</p>
+            <ul class="pro-list">
+              <li><span class="tile"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#users"></use></svg></span>
+                <div><strong>Несколько графиков</strong><span>Вторая работа, график супруга или напарника</span></div>
+              </li>
+              <li><span class="tile"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#file-text"></use></svg></span>
+                <div><strong>Отчёт в PDF</strong><span>Смены, часы и заработок за любой период в одном файле</span></div>
+              </li>
+              <li><span class="tile"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#chart-column"></use></svg></span>
+                <div><strong>Статистика за год</strong><span>Часы и заработок по месяцам, сравнение месяцев</span></div>
+              </li>
+              <li><span class="tile"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#palette"></use></svg></span>
+                <div><strong>Оформление виджетов</strong><span>Темы и цвета виджетов на главном экране</span></div>
+              </li>
+            </ul>
+          </div>
+          <div class="shot">
+            <img src="assets/shots/ru/pro.webp" width="640" height="1312" loading="lazy"
+              alt="Экран Шифтик PRO: четыре функции и кнопка «Купить за 299 ₽»">
+          </div>
+        </div>
+
+        <div class="gallery">
+          <figure>
+            <img src="assets/shots/ru/calendar-pro.webp" width="640" height="1312" loading="lazy"
+              alt="Календарь с двумя графиками: Работа и Оля, смены каждого своим цветом">
+            <figcaption><strong>Несколько графиков</strong>Смены каждого — своим цветом</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/shots/ru/year.webp" width="640" height="1312" loading="lazy"
+              alt="Статистика за 2026 год: заработок по месяцам на столбчатой диаграмме">
+            <figcaption><strong>Статистика за год</strong>Заработок и часы по месяцам</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/shots/ru/widgets.webp" width="640" height="1312" loading="lazy"
+              alt="Оформление виджетов: превью виджета и темы Светлая, Тёмная, Фирменная, Сиреневая">
+            <figcaption><strong>Оформление виджетов</strong>Четыре темы для главного экрана</figcaption>
+          </figure>
+        </div>
+
+        <div class="buy">
+          <article class="card">
+            <h3>Как купить</h3>
+            <ol class="steps">
+              <li>
+                <div><strong>Нажмите «Купить за 299 ₽»</strong><span>В приложении: Настройки → Шифтик PRO.</span></div>
+              </li>
+              <li>
+                <div><strong>Оплатите на странице Robokassa</strong><span>Картой или другим доступным способом. Чек
+                    придёт на почту.</span></div>
+              </li>
+              <li>
+                <div><strong>PRO включится сразу</strong><span>Сохраните код покупки — по нему PRO вернётся на новом
+                    телефоне.</span></div>
+              </li>
+            </ol>
+          </article>
+          <article class="card">
+            <span class="tile"><svg class="i" aria-hidden="true"><use href="assets/icons.svg#key-round"></use></svg></span>
+            <h3>Покупка не потеряется</h3>
+            <p>На новом телефоне PRO вернётся по коду покупки или из резервной копии — интернет нужен только для
+              восстановления по коду.</p>
+            <p>Не подошло — напишите в течение 14 дней, вернём деньги. Условия покупки и возврата — в
+              <a href="offer/">публичной оферте</a>.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Вопросы</span>
+          <h2>Частые вопросы</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Шифтик бесплатный?<svg class="i" aria-hidden="true"><use href="assets/icons.svg#chevron-down"></use></svg></summary>
+            <p>Да. Календарь, будильники, заработок, итоги, виджеты и резервная копия бесплатны и останутся бесплатными.
+              Дополнительные функции — в PRO за 299 ₽ один раз.</p>
+          </details>
+          <details>
+            <summary>Нужен ли интернет?<svg class="i" aria-hidden="true"><use href="assets/icons.svg#chevron-down"></use></svg></summary>
+            <p>Нет. График, будильники и расчёты работают без сети. Версия из RuStore выходит в интернет, только чтобы
+              купить или восстановить PRO.</p>
+          </details>
+          <details>
+            <summary>Где хранятся мои данные?<svg class="i" aria-hidden="true"><use href="assets/icons.svg#chevron-down"></use></svg></summary>
+            <p>Только на вашем телефоне: регистрации нет, график и заработок никуда не отправляются. Подробно — в
+              <a href="privacy/#ru">политике конфиденциальности</a>.</p>
+          </details>
+          <details>
+            <summary>Будильник точно зазвонит?<svg class="i" aria-hidden="true"><use href="assets/icons.svg#chevron-down"></use></svg></summary>
+            <p>Шифтик ставит точные будильники Android и звонит, даже когда приложение закрыто. Некоторые телефоны
+              закрывают приложения ради экономии заряда — «Проверка будильников» подскажет, что настроить, и даст
+              поставить пробный будильник.</p>
+          </details>
+          <details>
+            <summary>Как перенести данные на новый телефон?<svg class="i" aria-hidden="true"><use href="assets/icons.svg#chevron-down"></use></svg></summary>
+            <p>Сохраните резервную копию в файл и восстановите её на новом телефоне: Настройки → Резервная копия. PRO
+              вернётся из копии или по коду покупки.</p>
+          </details>
+          <details>
+            <summary>Можно вернуть деньги за PRO?<svg class="i" aria-hidden="true"><use href="assets/icons.svg#chevron-down"></use></svg></summary>
+            <p>Да, в течение 14 дней со дня оплаты: напишите на <a
+                href="mailto:alexpanda698@gmail.com">alexpanda698@gmail.com</a> и укажите код покупки. Условия — в <a
+                href="offer/">публичной оферте</a>.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="download">
+      <div class="wrap">
+        <div class="final">
+          <img src="assets/logo.svg" alt="" width="72" height="72">
+          <h2>Скачайте Шифтик</h2>
+          <p>Бесплатно, без регистрации и рекламы. Android 7.0 и новее.</p>
+          <div class="stores">
+            <a class="btn btn-primary" href="https://www.rustore.ru/catalog/app/app.shiftik">
+              <svg class="i" aria-hidden="true"><use href="assets/icons.svg#download"></use></svg>Скачать в RuStore</a>
+            <span class="btn btn-neutral" aria-disabled="true">Google Play — скоро</span>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <a class="logo" href="./"><img src="assets/logo.svg" alt="" width="28" height="28">Шифтик</a>
+      <nav aria-label="Документы">
+        <a href="privacy/#ru">Политика конфиденциальности</a>
+        <a href="terms/#ru">Условия использования</a>
+        <a href="offer/">Публичная оферта</a>
+        <a href="mailto:alexpanda698@gmail.com">alexpanda698@gmail.com</a>
+      </nav>
+      <p>© 2026 AlexPanda. Продавец PRO, его ИНН и реквизиты — в <a href="offer/">публичной оферте</a>.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Тень под шапкой, когда страница прокручена.
+    const header = document.querySelector('.top');
+    const mark = () => header.classList.toggle('scrolled', window.scrollY > 4);
+    addEventListener('scroll', mark, { passive: true });
+    mark();
+  </script>
 </body>
 
 </html>

@@ -6,103 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Shiftik — Privacy Policy / Политика конфиденциальности</title>
   <meta name="description" content="Privacy Policy of the Shiftik shift calendar app.">
-  <style>
-    :root {
-      --bg: #ffffff;
-      --text: #1d1f23;
-      --muted: #5d636e;
-      --accent: #3f4bef;
-      --card: #f5f5fc;
-      --border: #e2e3f0;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #121417;
-        --text: #e7e9ec;
-        --muted: #9aa2ad;
-        --accent: #9aa1ff;
-        --card: #1b1d26;
-        --border: #2c2f3d;
-      }
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    }
-
-    main {
-      max-width: 44rem;
-      margin: 0 auto;
-      padding: 2rem 1rem 4rem;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      font-size: 0.95rem;
-      margin-bottom: 2rem;
-    }
-
-    a {
-      color: var(--accent);
-    }
-
-    h1 {
-      font-size: 1.9rem;
-      line-height: 1.25;
-      margin: 0 0 0.25rem;
-    }
-
-    h2 {
-      font-size: 1.2rem;
-      margin: 2rem 0 0.5rem;
-    }
-
-    .date {
-      color: var(--muted);
-      margin: 0 0 1.5rem;
-    }
-
-    .summary {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1rem 1.25rem;
-    }
-
-    .summary ul {
-      margin: 0.5rem 0 0;
-      padding-left: 1.25rem;
-    }
-
-    ul {
-      padding-left: 1.25rem;
-    }
-
-    li {
-      margin: 0.25rem 0;
-    }
-
-    hr {
-      border: 0;
-      border-top: 1px solid var(--border);
-      margin: 4rem 0;
-    }
-  </style>
+  <meta name="theme-color" content="#f5f5fc">
+  <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/manrope-extrabold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/manrope-medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/site.css">
 </head>
 
-<body>
-  <main>
-    <nav><a href="#en">English</a><a href="#ru">Русский</a><a href="../terms/">Terms of Service / Условия использования</a></nav>
+<body class="doc">
+  <header class="top">
+    <div class="wrap">
+      <a class="logo" href="../en/"><img src="../assets/logo.svg" alt="" width="36" height="36">Shiftik</a>
+    </div>
+  </header>
+
+  <main class="legal">
+    <div class="wrap">
+    <nav class="legal-nav" aria-label="Documents / Документы"><a href="#en">English</a><a href="#ru">Русский</a><a href="../terms/">Terms of Service / Условия использования</a></nav>
 
     <!-- ─── English ─────────────────────────────────────────────── -->
     <article id="en" lang="en">
@@ -317,7 +238,23 @@
       <h2>12. Контакты</h2>
       <p>AlexPanda<br>Эл. почта: <a href="mailto:alexpanda698@gmail.com">alexpanda698@gmail.com</a></p>
     </article>
+    </div>
   </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <a class="logo" href="../en/"><img src="../assets/logo.svg" alt="" width="28" height="28">Shiftik</a>
+      <nav aria-label="Contacts"><a href="mailto:alexpanda698@gmail.com">alexpanda698@gmail.com</a></nav>
+      <p>© 2026 AlexPanda</p>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.querySelector('.top');
+    const mark = () => header.classList.toggle('scrolled', window.scrollY > 4);
+    addEventListener('scroll', mark, { passive: true });
+    mark();
+  </script>
 </body>
 
 </html>
