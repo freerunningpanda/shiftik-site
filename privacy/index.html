@@ -107,7 +107,7 @@
     <!-- ─── English ─────────────────────────────────────────────── -->
     <article id="en" lang="en">
       <h1>Shiftik — Privacy Policy</h1>
-      <p class="date">Effective date: November 12, 2026</p>
+      <p class="date">Effective date: November 17, 2026</p>
 
       <p>Shiftik (“the app”) is a shift calendar with alarms and pay calculation, developed by AlexPanda, an
         independent developer (“we”, “us”). This policy explains what data the app handles and how. It applies to the
@@ -117,8 +117,9 @@
         <strong>In short</strong>
         <ul>
           <li>Your schedule, shifts, notes and pay settings stay on your device. We never receive them.</li>
-          <li>In the Google Play version, crash reports are sent only if you allow it, and they never include your schedule or pay. The RuStore version sends nothing at all.</li>
-          <li>Purchases in the Google Play version are handled by Google Play. We never see your card details.</li>
+          <li>In the Google Play version, crash reports are sent only if you allow it, and they never include your schedule or pay. The RuStore version has no crash reports.</li>
+          <li>Purchases are paid through Google Play or, in the RuStore version, through Robokassa. We never see your card details.</li>
+          <li>To buy or restore PRO, the RuStore version contacts our payment server and sends it only a purchase code — never your name, email, schedule or pay.</li>
           <li>No account, no ads, no tracking, and we never sell data.</li>
         </ul>
       </div>
@@ -132,11 +133,11 @@
         <li>alarm and reminder settings;</li>
         <li>app settings.</li>
       </ul>
-      <p>Some of this may be sensitive, such as your pay and sick days. It is kept in the app’s private storage, which Android protects from other apps. Hours and earnings are calculated on your device. Nothing is sent to us or to anyone else: the app has no server, and we have no way to access this data.</p>
+      <p>Some of this may be sensitive, such as your pay and sick days. It is kept in the app’s private storage, which Android protects from other apps. Hours and earnings are calculated on your device. None of it is sent to us or to anyone else, and we have no way to access it.</p>
       <p><strong>Home screen widgets.</strong> If you add a Shiftik widget to your home screen, it shows your upcoming shifts there, so anyone who sees your home screen can see them. The widget’s data is kept in the app’s private storage.</p>
 
       <h2>2. Crash reports (optional, Google Play version only)</h2>
-      <p>This section applies only to the app from Google Play. The RuStore version has no crash reports and no internet access: it sends nothing.</p>
+      <p>This section applies only to the app from Google Play. The RuStore version has no crash reports.</p>
       <p>On first launch, the app asks whether you want to send crash reports. Nothing is sent until you agree. If you agree, then when the app crashes or hits an error, it sends a technical report through Firebase Crashlytics, a service provided by Google.</p>
       <p>A report contains:</p>
       <ul>
@@ -148,13 +149,21 @@
       <p>Reports do not contain your schedule, shifts, notes, pay, name or contact details. We use them only to find and fix bugs. Where the law requires a legal basis (for example, the GDPR), the basis is your consent. You can turn reports on or off at any time: Settings → About Shiftik → Send crash reports. When you turn them off, reports that have not been sent yet are deleted from your phone.</p>
       <p>Google processes the reports on our behalf and may do so on servers in different countries, including the USA. Crash reports are kept for 90 days and then deleted. More about Firebase and privacy: <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>.</p>
 
-      <h2>3. Purchases (Google Play version only)</h2>
-      <p>The Google Play version offers Shiftik PRO as an optional one-time purchase. Payment is made and processed by Google Play under Google’s terms; we never receive your card or payment details. To turn PRO on, the app asks Google Play on your device whether your Google account owns the purchase; it does not send this information or your schedule and pay data anywhere. Google gives us information about each order, such as the order number, product, price, country and date, which we use only for refunds and support requests. More about Google Play payments: <a href="https://payments.google.com/legaldocument?family=0.privacynotice">Google Payments Privacy Notice</a>. The RuStore version has no purchases.</p>
+      <h2>3. Purchases</h2>
+      <p><strong>Google Play version.</strong> The Google Play version offers Shiftik PRO as an optional one-time purchase. Payment is made and processed by Google Play under Google’s terms; we never receive your card or payment details. To turn PRO on, the app asks Google Play on your device whether your Google account owns the purchase; it does not send this information or your schedule and pay data anywhere. Google gives us information about each order, such as the order number, product, price, country and date, which we use only for refunds and support requests. More about Google Play payments: <a href="https://payments.google.com/legaldocument?family=0.privacynotice">Google Payments Privacy Notice</a>.</p>
+      <p><strong>RuStore version.</strong> The RuStore version offers Shiftik PRO as an optional one-time purchase paid through Robokassa (ROBOKASSA LLC), a Russian payment service. It works like this:</p>
+      <ul>
+        <li>When you tap Buy, the app asks our payment server to create an order. The server returns a purchase code (for example, K7Q2-9XMB), a secret order token and a link to the payment page. The app keeps the code and the token on your phone.</li>
+        <li>You pay on the Robokassa page in your browser. Your card details and the email for the receipt are entered there and processed by Robokassa under its own privacy policy: <a href="https://robokassa.com/privacy-policy/">robokassa.com/privacy-policy</a>. They are not sent to us or to the app.</li>
+        <li>Robokassa tells our server that the order is paid, and the server issues a PRO key signed by us. The app asks the server about the order with the code and the token, receives the key, checks its signature on your phone and turns PRO on. After that, PRO works without the internet.</li>
+        <li>On a new phone, you can restore PRO with your purchase code: the app sends the code to the server and receives the key. The key is also saved in the backup file (see section 4).</li>
+      </ul>
+      <p>Our payment server stores only the order number, the purchase code, a hash of the order token, the amount, the time of the order and of the payment, and the PRO key. It does not receive your name, email, phone number, card details, schedule or pay data. Like any server, it sees the IP address a request comes from; the address is kept only in the server’s memory while it is needed to limit repeated requests, and is never saved or logged. If you write to us about a refund or a problem with a purchase, we may ask for your purchase code.</p>
 
       <h2>4. Timesheets and backups</h2>
       <p>Your schedule and pay data leave the device only in the cases below, and only by your choice.</p>
       <ul>
-        <li><strong>Timesheet and backup files.</strong> CSV timesheets and backup files are created only when you ask for them. You decide where to save them or which app to share them with, using the Android save and share windows. To restore a backup, the app opens the Android file picker and gets access only to the file you choose. These files are not encrypted: anyone who has the file can read it. They are not sent to us.</li>
+        <li><strong>Timesheet and backup files.</strong> CSV timesheets and backup files are created only when you ask for them. You decide where to save them or which app to share them with, using the Android save and share windows. To restore a backup, the app opens the Android file picker and gets access only to the file you choose. These files are not encrypted: anyone who has the file can read it. They are not sent to us. In the RuStore version, if you bought PRO, the backup file also contains your PRO key, so that PRO turns on when you restore the backup on a new phone.</li>
         <li><strong>Android backup.</strong> If backup to your Google account is turned on in your Android settings, Android may include your schedule and pay data in your device backup, so that you can restore it on a new phone. Settings that belong to one phone, such as your answer about crash reports, are not included. Google stores this backup in your Google account under Google’s terms; we cannot access it. You can turn backup off in your Android settings.</li>
       </ul>
 
@@ -164,7 +173,8 @@
         <li><strong>Alarms &amp; reminders</strong> (exact alarms) — so that alarms ring exactly on time. On Android 13 and later it is granted when you install the app; on Android 12 you can turn it off in Android settings.</li>
         <li><strong>Run at startup</strong> — to restore alarms after the phone restarts.</li>
         <li><strong>Vibration</strong> — for alarms.</li>
-        <li><strong>Internet and network state</strong> — only in the Google Play version, only to send crash reports, if you allowed them. The RuStore version does not request them.</li>
+        <li><strong>Internet</strong> — in the Google Play version, only to send crash reports, if you allowed them; in the RuStore version, only to contact our payment server when you buy PRO or restore it with a code.</li>
+        <li><strong>Network state</strong> — only in the Google Play version, for crash reports.</li>
         <li><strong>Google Play billing</strong> — only in the Google Play version, to buy Shiftik PRO.</li>
       </ul>
       <p>The app does not request access to your location, contacts, calendar, camera, microphone, photos or files.</p>
@@ -181,10 +191,11 @@
       <ul>
         <li><strong>Data on your device</strong> stays until you delete it. In the app you can change or reset single days, delete pay rates and remove shift types. To delete everything, clear the app’s data in Android settings (Apps → Shiftik → Storage → Clear data) or uninstall the app. Files you saved or shared stay where they are. Android backups in your Google account are kept and deleted according to Google’s rules; you can manage them in your Google account.</li>
         <li><strong>Crash reports</strong> (Google Play version) are deleted automatically after 90 days. You can ask us to delete them sooner by email. Reports contain only random identifiers and are not linked to your name, so we may be unable to find the ones that came from your device.</li>
+        <li><strong>Purchase records</strong> (RuStore version) on our payment server contain no personal data and are kept so that you can restore PRO with your code at any time. To have a record deleted, write to us with your purchase code; after that, PRO can no longer be restored with this code.</li>
       </ul>
 
       <h2>8. Security</h2>
-      <p>Data on your device is kept in the app’s private storage, protected by Android. Crash reports are sent over an encrypted connection (HTTPS). Our access to the crash report console is protected by two-factor authentication. We recommend setting a screen lock on your phone: anyone who can unlock it can open the app and see your schedule and pay.</p>
+      <p>Data on your device is kept in the app’s private storage, protected by Android. Crash reports and requests to the payment server are sent over an encrypted connection (HTTPS). The PRO key is signed, so the app can check that it was issued by us. Keep your purchase code to yourself: anyone who knows it can restore PRO with it. Our access to the crash report console is protected by two-factor authentication. We recommend setting a screen lock on your phone: anyone who can unlock it can open the app and see your schedule and pay.</p>
 
       <h2>9. Children</h2>
       <p>The app is intended for adults who work in shifts and is not directed at children under 13. We do not knowingly collect personal data from children.</p>
@@ -204,7 +215,7 @@
     <!-- ─── Русский ─────────────────────────────────────────────── -->
     <article id="ru" lang="ru">
       <h1>Шифтик — Политика конфиденциальности</h1>
-      <p class="date">Дата вступления в силу: 12 ноября 2026 года</p>
+      <p class="date">Дата вступления в силу: 17 ноября 2026 года</p>
 
       <p>Шифтик (по-английски Shiftik, «приложение») — календарь смен с будильниками и расчётом заработка. Разработчик —
         AlexPanda, частный разработчик («мы»). Эта политика объясняет, какие данные обрабатывает приложение и как. Она
@@ -214,8 +225,9 @@
         <strong>Коротко</strong>
         <ul>
           <li>Ваш график, смены, заметки и настройки оплаты хранятся только на вашем устройстве. Мы их никогда не получаем.</li>
-          <li>В версии из Google Play отчёты о сбоях отправляются, только если вы разрешили, и в них никогда нет вашего графика и заработка. Версия из RuStore не отправляет ничего.</li>
-          <li>Покупки в версии из Google Play проводит Google Play. Данных вашей карты мы не видим.</li>
+          <li>В версии из Google Play отчёты о сбоях отправляются, только если вы разрешили, и в них никогда нет вашего графика и заработка. В версии из RuStore отчётов о сбоях нет.</li>
+          <li>Покупки оплачиваются через Google Play, а в версии из RuStore — через Robokassa. Данных вашей карты мы не видим.</li>
+          <li>Чтобы купить или восстановить PRO, версия из RuStore обращается к нашему серверу оплаты и передаёт ему только код покупки — не имя, не почту, не график и не заработок.</li>
           <li>Без аккаунта, без рекламы, без слежки, и мы никогда не продаём данные.</li>
         </ul>
       </div>
@@ -229,11 +241,11 @@
         <li>настройки будильников и напоминаний;</li>
         <li>настройки приложения.</li>
       </ul>
-      <p>Часть этих сведений может быть личной, например заработок и больничные. Они хранятся в закрытом хранилище приложения, которое Android защищает от других приложений. Часы и заработок считаются на устройстве. Ничего не передаётся ни нам, ни кому-либо ещё: у приложения нет сервера, и у нас нет доступа к этим данным.</p>
+      <p>Часть этих сведений может быть личной, например заработок и больничные. Они хранятся в закрытом хранилище приложения, которое Android защищает от других приложений. Часы и заработок считаются на устройстве. Ничего из этого не передаётся ни нам, ни кому-либо ещё, и у нас нет доступа к этим данным.</p>
       <p><strong>Виджеты на главном экране.</strong> Если добавить виджет Шифтика на главный экран, на нём будут видны ближайшие смены — их увидит любой, кто видит ваш экран. Данные виджета хранятся в закрытом хранилище приложения.</p>
 
       <h2>2. Отчёты о сбоях (по желанию, только в версии из Google Play)</h2>
-      <p>Этот раздел касается только приложения из Google Play. В версии из RuStore отчётов о сбоях нет, и доступа к интернету у неё тоже нет: она ничего не отправляет.</p>
+      <p>Этот раздел касается только приложения из Google Play. В версии из RuStore отчётов о сбоях нет.</p>
       <p>При первом запуске приложение спрашивает, согласны ли вы отправлять отчёты о сбоях. До вашего согласия ничего не отправляется. Если вы согласились, то при сбое или ошибке приложение отправит технический отчёт через Firebase Crashlytics — сервис компании Google.</p>
       <p>В отчёте есть:</p>
       <ul>
@@ -245,13 +257,21 @@
       <p>В отчётах нет вашего графика, смен, заметок, заработка, имени и контактов. Мы используем отчёты только для поиска и исправления ошибок. Там, где закон требует правового основания (например, GDPR), основание — ваше согласие. Включить или выключить отчёты можно в любой момент: «Настройки» → «О приложении» → «Отправлять отчёты о сбоях». При выключении ещё не отправленные отчёты удаляются с телефона.</p>
       <p>Google обрабатывает отчёты по нашему поручению и может делать это на серверах в разных странах, в том числе в США. Отчёты о сбоях хранятся 90 дней, затем удаляются. Подробнее о Firebase и конфиденциальности: <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>.</p>
 
-      <h2>3. Покупки (только в версии из Google Play)</h2>
-      <p>В версии из Google Play можно по желанию купить Шифтик PRO разовой покупкой. Оплату принимает и проводит Google Play по правилам Google; данные вашей карты и платежа мы не получаем. Чтобы включить PRO, приложение спрашивает Google Play на вашем телефоне, есть ли покупка в вашем аккаунте Google; эти сведения, как и ваш график и данные об оплате, никуда не отправляются. Google передаёт нам сведения о заказе — номер, товар, цену, страну и дату; мы используем их только для возвратов и ответов на обращения. Подробнее о платежах Google Play: <a href="https://payments.google.com/legaldocument?family=0.privacynotice">уведомление о конфиденциальности Google Payments</a>. В версии из RuStore покупок нет.</p>
+      <h2>3. Покупки</h2>
+      <p><strong>Версия из Google Play.</strong> В версии из Google Play можно по желанию купить Шифтик PRO разовой покупкой. Оплату принимает и проводит Google Play по правилам Google; данные вашей карты и платежа мы не получаем. Чтобы включить PRO, приложение спрашивает Google Play на вашем телефоне, есть ли покупка в вашем аккаунте Google; эти сведения, как и ваш график и данные об оплате, никуда не отправляются. Google передаёт нам сведения о заказе — номер, товар, цену, страну и дату; мы используем их только для возвратов и ответов на обращения. Подробнее о платежах Google Play: <a href="https://payments.google.com/legaldocument?family=0.privacynotice">уведомление о конфиденциальности Google Payments</a>.</p>
+      <p><strong>Версия из RuStore.</strong> В версии из RuStore можно по желанию купить Шифтик PRO разовой покупкой. Оплату принимает Robokassa (ООО «РОБОКАССА») — российский платёжный сервис. Покупка устроена так:</p>
+      <ul>
+        <li>По нажатию «Купить» приложение просит наш сервер оплаты создать заказ. Сервер возвращает код покупки (например, K7Q2-9XMB), секретный токен заказа и ссылку на страницу оплаты. Код и токен приложение хранит на вашем телефоне.</li>
+        <li>Вы платите на странице Robokassa в браузере. Данные карты и почту для чека вы вводите там же, их обрабатывает Robokassa по своей политике конфиденциальности: <a href="https://robokassa.com/privacy-policy/">robokassa.com/privacy-policy</a>. Ни нам, ни приложению они не передаются.</li>
+        <li>Robokassa сообщает нашему серверу, что заказ оплачен, и сервер выпускает подписанный нами ключ PRO. Приложение спрашивает сервер о заказе по коду и токену, получает ключ, проверяет его подпись на телефоне и включает PRO. Дальше PRO работает без интернета.</li>
+        <li>На новом телефоне PRO можно восстановить по коду покупки: приложение отправляет серверу код и получает ключ. Ключ есть и в файле резервной копии (см. раздел 4).</li>
+      </ul>
+      <p>Наш сервер оплаты хранит только номер заказа, код покупки, хеш токена заказа, сумму, время заказа и оплаты и ключ PRO. Ваших имени, почты, телефона, данных карты, графика и заработка он не получает. Как любой сервер, он видит IP-адрес, с которого пришёл запрос; адрес хранится только в памяти сервера, пока он нужен, чтобы ограничить повторные запросы, и не записывается ни в базу, ни в журнал. Если вы напишете нам о возврате или о проблеме с покупкой, мы можем попросить код покупки.</p>
 
       <h2>4. Табель и резервные копии</h2>
       <p>Ваш график и данные об оплате покидают устройство только в случаях ниже и только по вашему решению.</p>
       <ul>
-        <li><strong>Файлы табеля и резервной копии.</strong> Табель в CSV и файлы резервной копии создаются только по вашей команде. Вы сами решаете, куда их сохранить или в какое приложение отправить, — через системные окна Android «Сохранить» и «Поделиться». Чтобы восстановить копию, приложение открывает системное окно выбора файла и получает доступ только к выбранному вами файлу. Эти файлы не зашифрованы: их может прочитать любой, у кого есть файл. Нам они не передаются.</li>
+        <li><strong>Файлы табеля и резервной копии.</strong> Табель в CSV и файлы резервной копии создаются только по вашей команде. Вы сами решаете, куда их сохранить или в какое приложение отправить, — через системные окна Android «Сохранить» и «Поделиться». Чтобы восстановить копию, приложение открывает системное окно выбора файла и получает доступ только к выбранному вами файлу. Эти файлы не зашифрованы: их может прочитать любой, у кого есть файл. Нам они не передаются. В версии из RuStore, если вы купили PRO, в файле копии есть и ключ PRO: при восстановлении копии на новом телефоне PRO включится.</li>
         <li><strong>Резервное копирование Android.</strong> Если в настройках Android включено резервное копирование в аккаунт Google, Android может включать ваш график и данные об оплате в резервную копию устройства, чтобы вы могли восстановить их на новом телефоне. Настройки, которые относятся к одному телефону, например ответ про отчёты о сбоях, в копию не входят. Эту копию хранит Google в вашем аккаунте по своим правилам; у нас к ней доступа нет. Отключить резервное копирование можно в настройках Android.</li>
       </ul>
 
@@ -261,7 +281,8 @@
         <li><strong>Будильники и напоминания</strong> (точные будильники) — чтобы будильник звонил точно вовремя. На Android 13 и новее разрешение выдаётся при установке; на Android 12 его можно выключить в настройках Android.</li>
         <li><strong>Запуск при включении</strong> — чтобы восстановить будильники после перезагрузки телефона.</li>
         <li><strong>Вибрация</strong> — для будильников.</li>
-        <li><strong>Интернет и состояние сети</strong> — только в версии из Google Play и только для отправки отчётов о сбоях, если вы их разрешили. Версия из RuStore их не запрашивает.</li>
+        <li><strong>Интернет</strong> — в версии из Google Play только для отправки отчётов о сбоях, если вы их разрешили; в версии из RuStore только для связи с нашим сервером оплаты, когда вы покупаете PRO или восстанавливаете его по коду.</li>
+        <li><strong>Состояние сети</strong> — только в версии из Google Play, для отчётов о сбоях.</li>
         <li><strong>Платёжная система Google Play</strong> — только в версии из Google Play, чтобы купить Шифтик PRO.</li>
       </ul>
       <p>Приложение не запрашивает доступ к местоположению, контактам, календарю, камере, микрофону, фото и файлам.</p>
@@ -278,10 +299,11 @@
       <ul>
         <li><strong>Данные на устройстве</strong> хранятся, пока вы их не удалите. В приложении можно изменить или вернуть по графику отдельные дни, удалить ставки и убрать типы смен. Чтобы удалить всё, очистите данные приложения в настройках Android («Приложения» → Шифтик → «Хранилище» → «Очистить данные») или удалите приложение. Сохранённые и отправленные файлы остаются там, где они есть. Резервные копии Android в аккаунте Google хранятся и удаляются по правилам Google; управлять ими можно в аккаунте Google.</li>
         <li><strong>Отчёты о сбоях</strong> (версия из Google Play) удаляются автоматически через 90 дней. Попросить удалить их раньше можно по электронной почте. В отчётах только случайные идентификаторы, они не связаны с вашим именем, поэтому найти отчёты именно с вашего устройства мы можем не суметь.</li>
+        <li><strong>Записи о покупках</strong> (версия из RuStore) на нашем сервере оплаты не содержат персональных данных и хранятся, чтобы PRO можно было в любой момент восстановить по коду. Чтобы удалить запись, напишите нам код покупки; после этого восстановить PRO по этому коду будет нельзя.</li>
       </ul>
 
       <h2>8. Безопасность</h2>
-      <p>Данные на устройстве хранятся в закрытом хранилище приложения под защитой Android. Отчёты о сбоях передаются по зашифрованному соединению (HTTPS). Наш доступ к консоли отчётов защищён двухфакторной аутентификацией. Рекомендуем установить блокировку экрана на телефоне: любой, кто может его разблокировать, может открыть приложение и увидеть ваш график и заработок.</p>
+      <p>Данные на устройстве хранятся в закрытом хранилище приложения под защитой Android. Отчёты о сбоях и запросы к серверу оплаты передаются по зашифрованному соединению (HTTPS). Ключ PRO подписан, поэтому приложение может проверить, что его выпустили мы. Не показывайте никому код покупки: по нему можно восстановить PRO. Наш доступ к консоли отчётов защищён двухфакторной аутентификацией. Рекомендуем установить блокировку экрана на телефоне: любой, кто может его разблокировать, может открыть приложение и увидеть ваш график и заработок.</p>
 
       <h2>9. Дети</h2>
       <p>Приложение предназначено для взрослых, которые работают по сменам, и не рассчитано на детей младше 13 лет. Мы сознательно не собираем персональные данные детей.</p>
