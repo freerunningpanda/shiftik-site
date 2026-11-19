@@ -1,3 +1,5 @@
-# GitHub Pages: README — заметки для разработчика, на сайт он не попадает.
+# GitHub Pages: README и черновики (_drafts) — заметки для разработчика, на
+# сайт они не попадают.
 exclude:
   - README.md
+  - _drafts
